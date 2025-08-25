@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional con Blog Administrable (Laravel 12)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: black;
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .logo-container img {
+            max-width: 400px;
+            height: auto;
+        }
+        .section-title {
+            border-bottom: 2px solid #f95700;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #f95700;
+        }
+        .feature-card {
+            border-left: 4px solid #f95700;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 0 5px 5px 0;
+        }
+        .badge-container {
+            margin-bottom: 2rem;
+        }
+        .badge {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .requirement-item {
+            margin-bottom: 0.5rem;
+        }
+        .requirement-item i {
+            color: #f95700;
+            margin-right: 0.5rem;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .donate-btn {
+            background-color: #f95700;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        .donate-btn:hover {
+            background-color: #ff4d4d;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #f95700;
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+        .model-item {
+            margin-bottom: 0.5rem;
+        }
+        .model-item i {
+            color: #f95700;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" alt="Laravel Logo" class="img-fluid">
+            </div>
+            <h1 class="text-center">Portafolio Profesional con Blog Administrable (Laravel 12)</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="badge-container text-center">
+            <span class="badge bg-primary">License: MIT</span>
+            <span class="badge bg-primary">PHP 8.2+</span>
+            <span class="badge bg-danger">Laravel 12.x</span>
+            <span class="badge bg-primary">Frontend: Livewire, Blade, Bootstrap</span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p class="lead text-center">Aplicación web que combina un portafolio profesional con un sistema de blog completamente administrable, construido con Laravel 12.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h2 class="section-title">Estructura de Datos</h2>
+                <h4>Modelos Principales</h4>
+                <ul class="list-unstyled">
+                    <li class="model-item"><i class="fas fa-user"></i> <strong>User</strong>: Datos personales (nombre, foto, biografía, puesto)</li>
+                    <li class="model-item"><i class="fas fa-graduation-cap"></i> <strong>Education</strong>: Estudios y certificaciones</li>
+                    <li class="model-item"><i class="fas fa-briefcase"></i> <strong>WorkExperience</strong>: Experiencia laboral</li>
+                    <li class="model-item"><i class="fas fa-code"></i> <strong>Skill</strong>: Habilidades técnicas y profesionales</li>
+                    <li class="model-item"><i class="fas fa-share-alt"></i> <strong>SocialNetwork</strong>: Redes sociales y contactos</li>
+                    <li class="model-item"><i class="fas fa-newspaper"></i> <strong>Post</strong>: Artículos del blog con contenido y estado de publicación</li>
+                    <li class="model-item"><i class="fas fa-tags"></i> <strong>PostCategory</strong>: Categorías para organización temática</li>
+                    <li class="model-item"><i class="fas fa-tag"></i> <strong>PostTag</strong>: Etiquetas para clasificación detallada</li>
+                    <li class="model-item"><i class="fas fa-comments"></i> <strong>PostComment</strong>: Sistema de comentarios</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2 class="section-title">Secciones del Sitio</h2>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-user-tie"></i> Portafolio Profesional</h4>
+                    <ul>
+                        <li>Perfil personal con información biográfica</li>
+                        <li>Educación y certificaciones</li>
+                        <li>Experiencia laboral</li>
+                        <li>Habilidades técnicas</li>
+                        <li>Redes sociales</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4><i class="fas fa-blog"></i> Blog</h4>
+                    <ul>
+                        <li>Artículos organizados por categorías</li>
+                        <li>Sistema de etiquetas</li>
+                        <li>Comentarios</li>
+                        <li>Búsqueda de contenido</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="section-title">Características Principales</h2>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <h4><i class="fas fa-user-tie"></i> Portafolio Profesional</h4>
+                            <ul>
+                                <li>Perfil personal con imagen y biografía</li>
+                                <li>Timeline de educación y certificaciones</li>
+                                <li>Cards de experiencia laboral</li>
+                                <li>Barras de progreso para habilidades</li>
+                                <li>Enlaces a redes sociales con iconos</li>
+                                <li>Diseño responsive con Bootstrap 5</li>
+                                <li>Interfaz construida con Livewire y Blade</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <h4><i class="fas fa-blog"></i> Blog Administrable</h4>
+                            <ul>
+                                <li>CRUD completo para artículos</li>
+                                <li>Categorías y etiquetas</li>
+                                <li>Sistema de comentarios</li>
+                                <li>Editor WYSIWYG (CKEditor)</li>
+                                <li>Gestión de imágenes</li>
+                                <li>Estilos con Bootstrap 5</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <h4><i class="fas fa-cogs"></i> Panel de Administración</h4>
+                            <ul>
+                                <li>Autenticación segura</li>
+                                <li>Gestión de usuarios y roles</li>
+                                <li>Estadísticas básicas</li>
+                                <li>Configuración del sitio</li>
+                                <li>Gestión de secciones del portafolio (perfil, educación, experiencia, etc.)</li>
+                                <li>Interfaz construida con Livewire y Blade</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h2 class="section-title">Requisitos Técnicos</h2>
+                <ul class="list-unstyled">
+                    <li class="requirement-item"><i class="fas fa-check"></i> PHP 8.2 o superior</li>
+                    <li class="requirement-item"><i class="fas fa-check"></i> Laravel 12</li>
+                    <li class="requirement-item"><i class="fas fa-check"></i> Composer 2.5+</li>
+                    <li class="requirement-item"><i class="fas fa-check"></i> Base de datos MySQL 8.0+ o MariaDB 10.3+</li>
+                    <li class="requirement-item"><i class="fas fa-check"></i> Node.js 18+ (para assets frontend)</li>
+                    <li class="requirement-item"><i class="fas fa-check"></i> npm 9+ o yarn 1.22+</li>
+                    <li class="requirement-item"><i class="fas fa-check"></i> Bootstrap 5.3.7</li>
+                    <li class="requirement-item"><i class="fas fa-check"></i> FontAwesome 6.7.2 (para iconos)</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2 class="section-title">Acceso al Panel de Administración</h2>
+                <div class="feature-card">
+                    <p>Para acceder al panel de administración, utiliza las siguientes credenciales:</p>
+                    <ul>
+                        <li><strong>URL</strong>: <code>http://127.0.0.1:8000/login</code></li>
+                        <li><strong>Usuario</strong>: <code>admin@email.com</code></li>
+                        <li><strong>Contraseña</strong>: <code>admin123</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="section-title">Instalación y Configuración</h2>
+                
+                <h4>1. Clonar el repositorio:</h4>
+                <pre><code>git clone https://github.com/MarioSandovalP3/laravel-12-portafolio-blog.git
+cd laravel-12-portafolio-blog</code></pre>
+
+                <h4>2. Instalar dependencias:</h4>
+                <pre><code>composer install
+npm install</code></pre>
+
+                <h4>3. Compilar y optimizar los archivos frontend (JavaScript, CSS, etc.) usando Vite:</h4>
+                <pre><code>npm run build</code></pre>
+
+                <h4>4. Para que las imágenes y archivos subidos sean accesibles públicamente, ejecuta:</h4>
+                <pre><code>php artisan storage:link</code></pre>
+                <p>Esto creará un enlace simbólico desde <code>public/storage</code> a <code>storage/app/public</code>.</p>
+
+                <h4>5. Configurar entorno:</h4>
+                <pre><code>cp .env.example .env
+php artisan key:generate</code></pre>
+
+                <h4>6. Configurar base de datos en <code>.env</code>:</h4>
+                <pre><code>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nombre_bd
+DB_USERNAME=usuario
+DB_PASSWORD=contraseña</code></pre>
+
+                <h4>7. Migrar y poblar base de datos:</h4>
+                <pre><code>php artisan migrate --seed</code></pre>
+
+                <h4>8. Iniciar servidor de desarrollo:</h4>
+                <pre><code>php artisan serve</code></pre>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="section-title">Configuración para Producción</h2>
+                
+                <h4>1. Optimizar el autoloader:</h4>
+                <pre><code>composer install --optimize-autoloader --no-dev</code></pre>
+
+                <h4>2. Cachear configuraciones y rutas:</h4>
+                <pre><code>php artisan config:cache
+php artisan route:cache
+php artisan view:cache</code></pre>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="section-title">Configuración con Docker Compose</h2>
+                
+                <p>El proyecto incluye un archivo <code>docker-compose.yml</code> preconfigurado con:</p>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-database"></i> Servicio MySQL</h4>
+                    <ul>
+                        <li>Imagen: mysql:8.0</li>
+                        <li>Puerto: 3306</li>
+                        <li>Credenciales:
+                            <ul>
+                                <li>Usuario root: root</li>
+                                <li>Base de datos: laravel_db</li>
+                                <li>Usuario app: laravel_user</li>
+                                <li>Contraseña: secret</li>
+                            </ul>
+                        </li>
+                        <li>Volumen persistente para datos</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4><i class="fas fa-tools"></i> Servicio phpMyAdmin (opcional)</h4>
+                    <ul>
+                        <li>Accesible en: http://localhost:8080</li>
+                        <li>Configurado para conectarse automáticamente al servicio MySQL</li>
+                    </ul>
+                </div>
+
+                <h3 class="mt-4">Pasos para usar Docker:</h3>
+                
+                <h4>1. Copiar el archivo <code>.env.example</code> a <code>.env</code> y configurar:</h4>
+                <pre><code>DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=secret</code></pre>
+
+                <h4>2. Ejecutar los servicios:</h4>
+                <pre><code>docker-compose up -d</code></pre>
+
+                <h4>3. Para detener los servicios:</h4>
+                <pre><code>docker-compose down</code></pre>
+
+                <div class="alert alert-info mt-3">
+                    <i class="fas fa-info-circle"></i> Nota: Los datos de MySQL persisten gracias al volumen configurado.
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="section-title">Configuración Adicional</h2>
+                
+                <p>Para configurar el correo (contacto y notificaciones), editar en <code>.env</code>:</p>
+                <pre><code>MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"</code></pre>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2

@@ -1,0 +1,652 @@
+/* Color de fondo al navar*/
+.fixed-top .navbar {
+	background: #805dca !important;
+}
+
+/* Para poder insertar un link en un modal */
+.ck-balloon-panel {
+	z-index: 1050 !important;
+}
+
+/* Le da un alto al editor de texto ckeditor */
+.ck-content {
+	min-height: 230px !important;
+	max-height: 1080px !important;
+}
+
+/*
+Este código CSS personaliza un control de entrada (input) y selectores de formulario, incluyendo la creación de un interruptor (toggle switch) estilizado para una casilla de verificación (checkbox).
+*/
+.content-input input,
+.content-select select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.content-input input {
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+}
+
+.content-input {
+	position: relative;
+	margin-bottom: 30px;
+	padding: 5px 0 5px 60px;
+	display: block;
+}
+
+.content-input input+i {
+	background: #f0f0f0;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.content-input input[type=checkbox]+i {
+	width: 52px;
+	height: 30px;
+	border-radius: 15px;
+}
+
+.content-input input[type=checkbox]+i:before {
+	content: '';
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+	-webkit-box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-input input[type=checkbox]:checked+i:before {
+	left: 22px;
+	-webkit-box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 3px 0 -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-input input[type=checkbox]:checked+i {
+	background: #2AC176;
+}
+
+.content-input input[type=checkbox]+i:after {
+	content: 'ON';
+	position: absolute;
+	font-size: 10px;
+	color: rgba(255, 255, 255, 0.6);
+	top: 8px;
+	left: 4px;
+	opacity: 0;
+	transition: all 0.25s ease 0.25s;
+}
+
+.content-input input[type=checkbox]:checked+i:after {
+	opacity: 1;
+}
+
+/** Sugerencias en post */
+.suggestions {
+	border: 1px solid #ccc;
+	max-height: 100px;
+	overflow-y: auto;
+	margin-top: 3px;
+}
+
+.suggestion-item {
+	padding: 3px;
+	cursor: pointer;
+}
+
+.suggestion-item:hover {
+	background-color: #f0f0f0;
+}
+
+.selected-tags .tag {
+	display: inline-block;
+	background-color: #805dca;
+	color: white;
+	padding: 3px;
+	margin: 3px;
+	border-radius: 3px;
+}
+
+.selected-tags .tag-suggestions {
+	display: inline-block;
+	background-color: #555f66;
+	color: white;
+	padding: 3px;
+	margin: 3px;
+	border-radius: 3px;
+}
+
+.selected-tags .tag button {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 10px;
+	margin-left: 3px;
+	cursor: pointer;
+}
+
+/*** post ***/
+.position-post {
+	position: absolute;
+	right: 70px;
+
+}
+
+.preview-post {
+	width: 248px;
+	height: 204px;
+	position: absolute;
+	top: 3px;
+	left: 18px;
+}
+
+.img-post {
+	position: absolute;
+	top: 3px;
+	width: 248px;
+	height: 204px;
+	left: 18px;
+	border-radius: 5px;
+}
+
+/************ Botones redes sociales **************/
+
+.redes {
+	background: transparent;
+	display: inline-flex;
+	list-style: none;
+	width: 100%;
+	justify-content: center;
+}
+
+.redes div {
+	color: #424242;
+
+}
+
+.redes .icon {
+	position: relative;
+	background: #f2f2f2;
+	border-radius: 50%;
+	margin: 5px;
+	width: 30px;
+	height: 30px;
+	font-size: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	text-decoration: none;
+}
+
+.redes .icon span i {
+	font-size: 1rem;
+	/* Ajusta el tamaño del ícono a 1rem */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1.5rem;
+	height: 1.5rem;
+	color: #141414;
+	/* Ajusta el color del ícono */
+}
+
+.redes .icon:hover span i {
+	color: #ffffff;
+	/* Ajusta el color del ícono */
+}
+
+.redes .icon:hover span svg {
+	color: #ffffff;
+	/* Ajusta el color del ícono */
+}
+
+.redes .tooltip {
+	position: absolute;
+	top: 0;
+	font-size: 14px;
+	background: #fff;
+	color: #fff;
+	padding: 5px 8px;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.redes .tooltip::before {
+	position: absolute;
+	content: "";
+	height: 8px;
+	width: 8px;
+	background: #fff;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%) rotate(45deg);
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.redes .icon:hover .tooltip {
+	top: -45px;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.redes .icon:hover span,
+.redes .icon:hover .tooltip {
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.redes .facebook:hover,
+.redes .facebook:hover .tooltip,
+.redes .facebook:hover .tooltip::before {
+	background: #1877f2;
+	color: #fff;
+}
+
+.redes .twitter:hover,
+.redes .twitter:hover .tooltip,
+.redes .twitter:hover .tooltip::before {
+	background: #0a0a0a;
+	color: #fff;
+}
+
+.redes .instagram:hover,
+.redes .instagram:hover .tooltip,
+.redes .instagram:hover .tooltip::before {
+	background: #e4405f;
+	color: #fff;
+}
+
+.redes .linkedin:hover,
+.redes .linkedin:hover .tooltip,
+.redes .linkedin:hover .tooltip::before {
+	background: #2b7cbe;
+	color: #fff;
+}
+
+.redes .pinterest:hover,
+.redes .pinterest:hover .tooltip,
+.redes .pinterest:hover .tooltip::before {
+	background: #bd0230;
+	color: #fff;
+}
+
+.redes .telegram:hover,
+.redes .telegram:hover .tooltip,
+.redes .telegram:hover .tooltip::before {
+	background: #46c2f3;
+	color: #fff;
+}
+
+.redes .youtube:hover,
+.redes .youtube:hover .tooltip,
+.redes .youtube:hover .tooltip::before {
+	background: #f30707;
+	color: #fff;
+}
+
+.redes .github:hover,
+.redes .github:hover .tooltip,
+.redes .github:hover .tooltip::before {
+	background: #0f0e0e;
+	color: #fff;
+}
+
+.redes .behance:hover,
+.redes .behance:hover .tooltip,
+.redes .behance:hover .tooltip::before {
+	background: #1769ff;
+	color: #fff;
+}
+
+.redes .dribbble:hover,
+.redes .dribbble:hover .tooltip,
+.redes .dribbble:hover .tooltip::before {
+	background: #ea4c89;
+	color: #fff;
+}
+
+.redes .deviantart:hover,
+.redes .deviantart:hover .tooltip,
+.redes .deviantart:hover .tooltip::before {
+	background: #05cc47;
+	color: #fff;
+}
+
+.redes .artstation:hover,
+.redes .artstation:hover .tooltip,
+.redes .artstation:hover .tooltip::before {
+	background: #13aff0;
+	color: #fff;
+}
+
+.redes .kofi:hover,
+.redes .kofi:hover .tooltip,
+.redes .kofi:hover .tooltip::before {
+	background: #29abe0;
+	color: #fff;
+}
+
+.redes .tiktok:hover,
+.redes .tiktok:hover .tooltip,
+.redes .tiktok:hover .tooltip::before {
+	background: #010101;
+	color: #fff;
+}
+
+.redes .threads:hover,
+.redes .threads:hover .tooltip,
+.redes .threads:hover .tooltip::before {
+	background: #000000;
+	color: #fff;
+}
+
+
+/************end redes ***************/
+
+/************ Progressbar color *******/
+.bg-custom-1 {
+    background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%) !important;
+    /* Vibrant Orange-Red gradient */
+}
+
+.bg-custom-2 {
+    background: linear-gradient(135deg, #1E90FF 0%, #4682B4 100%) !important;
+    /* Bright Steel Blue gradient */
+}
+
+.bg-custom-3 {
+    background: linear-gradient(135deg, #7CFC00 0%, #5a7009 100%) !important;
+    /* Vibrant Olive Drab gradient */
+}
+
+.bg-custom-4 {
+    background: linear-gradient(135deg, #DA70D6 0%, #800080 100%) !important;
+    /* Electric Purple gradient */
+}
+
+.bg-custom-5 {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    /* Golden Orange gradient */
+}
+
+.bg-custom-6 {
+    background: linear-gradient(135deg, #4169E1 0%, #4a4ce0 100%) !important;
+    /* Intense Royal Blue gradient */
+}
+
+.bg-custom-7 {
+    background: linear-gradient(135deg, #FF1493 0%, #f10b91 100%) !important;
+    /* Neon Pink gradient */
+}
+
+.bg-custom-8 {
+    background: linear-gradient(135deg, #32CD32 0%, #0c6d19 100%) !important;
+    /* Lush Green gradient */
+}
+
+.bg-custom-9 {
+    background: linear-gradient(135deg, #E6E6FA 0%, #b28ae6 100%) !important;
+    /* Soft Lavender gradient */
+}
+
+.bg-custom-10 {
+    background: linear-gradient(135deg, #FF0000 0%, #f00808 100%) !important;
+    /* Fiery Crimson gradient */
+}
+
+.bg-custom-11 {  
+    background: linear-gradient(135deg, #FF00FF 0%, #9400D3 100%) !important;  
+    /* Neon Magenta-Purple */  
+}  
+
+.bg-custom-12 {  
+    background: linear-gradient(135deg, #00FFFF 0%, #008B8B 100%) !important;  
+    /* Electric Cyan-Teal */  
+}  
+
+.bg-custom-13 {  
+    background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%) !important;  
+    /* Sun Gold-Orange */  
+}  
+
+.bg-custom-14 {  
+    background: linear-gradient(135deg, #FF69B4 0%, #C71585 100%) !important;  
+    /* Hot Pink-Rose */  
+}  
+
+.bg-custom-15 {  
+    background: linear-gradient(135deg, #7FFF00 0%, #228B22 100%) !important;  
+    /* Acid Green-Forest */  
+}  
+
+.bg-custom-16 {  
+    background: linear-gradient(135deg, #40E0D0 0%, #20B2AA 100%) !important;  
+    /* Turquoise-Sea */  
+}  
+
+.bg-custom-17 {  
+    background: linear-gradient(135deg, #FF4500 0%, #FF0000 100%) !important;  
+    /* Lava Red-Orange */  
+}  
+
+.bg-custom-18 {  
+    background: linear-gradient(135deg, #9370DB 0%, #4B0082 100%) !important;  
+    /* Soft Purple-Indigo */  
+}  
+
+.bg-custom-19 {  
+    background: linear-gradient(135deg, #F0E68C 0%, #DAA520 100%) !important;  
+    /* Light Gold-Khaki */  
+}  
+
+.bg-custom-20 {  
+    background: linear-gradient(135deg, #00FF7F 0%, #006400 100%) !important;  
+    /* Mint Green-Dark Green */  
+}  
+
+/************End***********************/
+
+/************ INPUT FILE ****************/
+.filelabel {
+	width: 250px;
+	border: 2px solid #805dca;
+	border-radius: 5px;
+	display: block;
+	padding: 2px;
+	transition: border 300ms ease;
+	cursor: pointer;
+	text-align: center;
+	margin: 0;
+}
+
+.filelabel i {
+	display: block;
+	font-size: 20px;
+}
+
+.filelabel i,
+.filelabel .title {
+	color: grey;
+	transition: 200ms color;
+	font-size: 12px;
+}
+
+.filelabel:hover {
+	border: 2px solid #1665c4;
+}
+
+.filelabel:hover i,
+.filelabel:hover .title {
+	color: #1665c4;
+}
+
+#FileInput {
+	display: none;
+}
+
+#FileInput-1 {
+	display: none;
+}
+
+#FileInput-2 {
+	display: none;
+}
+
+#FileInput-3 {
+	display: none;
+}
+
+.preview {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 5px;
+}
+
+.dd-thumbnail {
+	width: 100px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.preview-img img {
+	width: 80px;
+	height: 60px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+/*** skill ***/
+.position-skill {
+	position: absolute;
+	right: 70px;
+
+}
+
+.preview-skill {
+	width: 205px;
+	height: 204px;
+	position: absolute;
+	top: 3px;
+	left: 18px;
+}
+
+.img-skill {
+	position: absolute;
+	top: 3px;
+	width: 203px;
+	height: 204px;
+	left: 19px;
+	border-radius: 5px;
+}
+
+/*** end skill ***/
+
+/*** user ***/
+.position-user {
+	position: absolute;
+	right: 70px;
+
+}
+
+.preview-user {
+	width: 205px;
+	height: 204px;
+	position: absolute;
+	top: 3px;
+	left: 18px;
+}
+
+.img-user {
+	position: absolute;
+	top: 3px;
+	width: 203px;
+	height: 204px;
+	left: 19px;
+	border-radius: 5px;
+}
+
+/*** end user ***/
+
+
+/** Estilo para select **/
+.small-form-control {
+	display: block;
+	width: 100%;
+	padding: 0.25rem 0.5rem;
+	/* Reduce el relleno */
+	font-size: 0.875rem;
+	/* Tamaño de fuente más pequeño */
+	line-height: 1.25;
+	/* Ajusta la altura de línea */
+	color: #212529;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #a8a8a8;
+	;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	height: 30px;
+	/* Altura específica más pequeña */
+}
+
+.small-form-control:focus {
+	color: #212529;
+	background-color: #fff;
+	border-color: #80bdff;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/** end ***/
+
+
+.suggestions {
+	border: 1px solid #ccc;
+	max-height: 100px;
+	overflow-y: auto;
+	margin-top: 3px;
+}
+
+.suggestion-item {
+	padding: 3px;
+	cursor: pointer;
+}
+
+.suggestion-item:hover {
+	background-color: #f0f0f0;
+}
+
+.selected-tags .tag {
+	display: inline-block;
+	background-color: #805dca;
+	color: white;
+	padding: 3px;
+	margin: 3px;
+	border-radius: 3px;
+}
+
+.selected-tags .tag button {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 10px;
+	margin-left: 3px;
+	cursor: pointer;
+}
